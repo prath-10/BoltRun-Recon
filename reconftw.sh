@@ -30,7 +30,7 @@ function banner_graber() {
 function banner() {
 	banner_code=$(banner_graber)
 	printf "\n${bgreen}${banner_code}"
-	printf "\n version 1.1                                 by TeamBolt${reset}\n"
+	printf "\n                                 by TeamBolt${reset}\n"
 }
 
 function test_connectivity() {
@@ -431,7 +431,7 @@ function google_dorks() {
 	end_func "Results are saved in $domain/osint/dorks.txt" "${FUNCNAME[0]}"
 	else
 		if [[ $GOOGLE_DORKS == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} are already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -461,7 +461,7 @@ function github_dorks() {
 	end_func "Results are saved in $domain/osint/gitdorks.txt" "${FUNCNAME[0]}"
 	else
 		if [[ $GITHUB_DORKS == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -495,7 +495,7 @@ function github_repos() {
 		end_func "Results are saved in $domain/osint/github_company_secrets.json" ${FUNCNAME[0]}
 	else
 		if [[ $GITHUB_REPOS == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -517,12 +517,12 @@ function metadata() {
 		end_func "Results are saved in $domain/osint/[software/authors/metadata_results].txt" ${FUNCNAME[0]}
 	else
 		if [[ $METADATA == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $METADATA == false ]] || [[ $OSINT == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -555,12 +555,12 @@ function apileaks() {
 		end_func "Results are saved in $domain/osint/[software/authors/metadata_results].txt" ${FUNCNAME[0]}
 	else
 		if [[ $API_LEAKS == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $API_LEAKS == false ]] || [[ $OSINT == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -597,12 +597,12 @@ function emails() {
 		end_func "Results are saved in $domain/osint/emails|passwords.txt" ${FUNCNAME[0]}
 	else
 		if [[ $EMAILS == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $EMAILS == false ]] || [[ $OSINT == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -626,12 +626,12 @@ function domain_info() {
 		end_func "Results are saved in $domain/osint/domain_info_[general/name/email/ip].txt" ${FUNCNAME[0]}
 	else
 		if [[ $DOMAIN_INFO == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $DOMAIN_INFO == false ]] || [[ $OSINT == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -655,12 +655,12 @@ function ip_info() {
 		fi
 	else
 		if [[ $IP_INFO == false ]] || [[ $OSINT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $IP_INFO == false ]] || [[ $OSINT == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -760,7 +760,7 @@ function sub_passive() {
 		end_subfunc "${NUMOFLINES} new subs (passive)" ${FUNCNAME[0]}
 	else
 		if [[ $SUBPASSIVE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -779,7 +779,7 @@ function sub_crt() {
 		end_subfunc "${NUMOFLINES} new subs (cert transparency)" ${FUNCNAME[0]}
 	else
 		if [[ $SUBCRT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -836,7 +836,7 @@ function sub_noerror() {
 		fi
 	else
 		if [[ $SUBNOERROR == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -901,7 +901,7 @@ function sub_brute() {
 		end_subfunc "${NUMOFLINES} new subs (bruteforce)" ${FUNCNAME[0]}
 	else
 		if [[ $SUBBRUTE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -961,7 +961,7 @@ function sub_scraping() {
 		fi
 	else
 		if [[ $SUBSCRAPING == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -991,7 +991,7 @@ function sub_analytics() {
 		end_subfunc "${NUMOFLINES} new subs (analytics relationship)" ${FUNCNAME[0]}
 	else
 		if [[ $SUBANALYTICS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1052,7 +1052,7 @@ function sub_permut() {
 		end_subfunc "${NUMOFLINES} new subs (permutations)" ${FUNCNAME[0]}
 	else
 		if [[ $SUBPERMUTE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1094,7 +1094,7 @@ function sub_regex_permut() {
 		end_subfunc "${NUMOFLINES} new subs (permutations by regex)" ${FUNCNAME[0]}
 	else
 		if [[ $SUBREGEXPERMUTE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1125,7 +1125,7 @@ function sub_recursive_passive() {
 		end_subfunc "${NUMOFLINES} new subs (recursive)" ${FUNCNAME[0]}
 	else
 		if [[ $SUB_RECURSIVE_PASSIVE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1176,7 +1176,7 @@ function sub_recursive_brute() {
 			fi
 			cat .tmp/permute1_recursive.txt .tmp/permute2_recursive.txt 2>>"$LOGFILE" | anew -q .tmp/permute_recursive.txt
 		else
-			end_subfunc "skipped in this mode or defined in boltrun.cfg" ${FUNCNAME[0]}
+			end_subfunc "skipped in this mode or defined in reconftw.cfg" ${FUNCNAME[0]}
 		fi
 		if [[ $INSCOPE == true ]]; then
 			check_inscope .tmp/permute_recursive.txt 2>>"$LOGFILE" >/dev/null
@@ -1195,7 +1195,7 @@ function sub_recursive_brute() {
 		end_subfunc "${NUMOFLINES} new subs (recursive active)" ${FUNCNAME[0]}
 	else
 		if [[ $SUB_RECURSIVE_BRUTE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1231,7 +1231,7 @@ function subtakeover() {
 		end_func "Results are saved in $domain/webs/takeover.txt" ${FUNCNAME[0]}
 	else
 		if [[ $SUBTAKEOVER == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1251,12 +1251,12 @@ function zonetransfer() {
 		end_func "Results are saved in $domain/subdomains/zonetransfer.txt" ${FUNCNAME[0]}
 	else
 		if [[ $ZONETRANSFER == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $ZONETRANSFER == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -1296,12 +1296,12 @@ function s3buckets() {
 		end_func "Results are saved in subdomains/s3buckets.txt and subdomains/cloud_assets.txt" ${FUNCNAME[0]}
 	else
 		if [[ $S3BUCKETS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $S3BUCKETS == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -1365,7 +1365,7 @@ function geo_info() {
 		end_func "Results are saved in hosts/geoip.txt and hosts/geoip.json" ${FUNCNAME[0]}
 	else
 		if [[ $GEO_INFO == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1401,7 +1401,7 @@ function webprobe_simple() {
 		fi
 	else
 		if [[ $WEBPROBESIMPLE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1446,7 +1446,7 @@ function webprobe_full() {
 		fi
 	else
 		if [[ $WEBPROBEFULL == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1469,7 +1469,7 @@ function screenshot() {
 		end_func "Results are saved in $domain/screenshots folder" ${FUNCNAME[0]}
 	else
 		if [[ $WEBSCREENSHOT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1496,7 +1496,7 @@ function virtualhosts() {
 		fi
 	else
 		if [[ $VIRTUALHOSTS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1532,12 +1532,12 @@ function favicon() {
 		end_func "Results are saved in hosts/favicontest.txt" ${FUNCNAME[0]}
 	else
 		if [[ $FAVICON == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ $domain =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9] ]]; then
 			return
 		else
 			if [[ $FAVICON == false ]]; then
-				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+				printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 			else
 				printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 			fi
@@ -1606,7 +1606,7 @@ function portscan() {
 		end_func "Results are saved in hosts/portscan_[passive|active|shodan].[txt|xml]" ${FUNCNAME[0]}
 	else
 		if [[ $PORTSCANNER == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1624,7 +1624,7 @@ function cdnprovider() {
 		end_func "Results are saved in hosts/cdn_providers.txt" ${FUNCNAME[0]}
 	else
 		if [[ $CDN_IP == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1661,7 +1661,7 @@ function waf_checks() {
 		fi
 	else
 		if [[ $WAF_DETECTION == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1702,7 +1702,7 @@ function nuclei_check() {
 		end_func "Results are saved in $domain/nuclei_output folder" ${FUNCNAME[0]}
 	else
 		if [[ $NUCLEICHECK == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1742,7 +1742,7 @@ function fuzz() {
 		fi
 	else
 		if [[ $FUZZ == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1768,7 +1768,7 @@ function iishortname() {
 		fi
 	else
 		if [[ $IIS_SHORTNAME == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1813,7 +1813,7 @@ function cms_scanner() {
 		fi
 	else
 		if [[ $CMS_SCANNER == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1894,7 +1894,7 @@ function urlchecks() {
 		fi
 	else
 		if [[ $URL_CHECK == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1923,7 +1923,7 @@ function url_gf() {
 		end_func "Results are saved in $domain/gf folder" ${FUNCNAME[0]}
 	else
 		if [[ $URL_GF == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -1950,7 +1950,7 @@ function url_ext() {
 		fi
 	else
 		if [[ $URL_EXT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2005,7 +2005,7 @@ function jschecks() {
 		fi
 	else
 		if [[ $JSCHECKS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2032,7 +2032,7 @@ function wordlist_gen() {
 		fi
 	else
 		if [[ $WORDLIST == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2052,7 +2052,7 @@ function wordlist_gen_roboxtractor() {
 		end_func "Results are saved in $domain/webs/robots_wordlist.txt" ${FUNCNAME[0]}
 	else
 		if [[ $ROBOTSWORDLIST == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2070,7 +2070,7 @@ function password_dict() {
 		end_func "Results are saved in $domain/webs/password_dict.txt" ${FUNCNAME[0]}
 	else
 		if [[ $PASSWORD_DICT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2113,7 +2113,7 @@ function brokenLinks() {
 		end_func "Results are saved in vulns/brokenLinks.txt" ${FUNCNAME[0]}
 	else
 		if [[ $BROKENLINKS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2171,7 +2171,7 @@ function xss() {
 		end_func "Results are saved in vulns/xss.txt" ${FUNCNAME[0]}
 	else
 		if [[ $XSS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/xss.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to XSS ${reset}\n\n"
 		else
@@ -2191,7 +2191,7 @@ function cors() {
 		end_func "Results are saved in vulns/cors.txt" ${FUNCNAME[0]}
 	else
 		if [[ $CORS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2215,7 +2215,7 @@ function open_redirect() {
 		fi
 	else
 		if [[ $OPEN_REDIRECT == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/redirect.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to Open Redirect ${reset}\n\n"
 		else
@@ -2256,7 +2256,7 @@ function ssrf_checks() {
 		pkill -f interactsh-client &
 	else
 		if [[ $SSRF_CHECKS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/ssrf.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to SSRF ${reset}\n\n"
 		else
@@ -2280,7 +2280,7 @@ function crlf_checks() {
 		fi
 	else
 		if [[ $CRLF_CHECKS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2304,7 +2304,7 @@ function lfi() {
 		fi
 	else
 		if [[ $LFI == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/lfi.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to LFI ${reset}\n\n"
 		else
@@ -2331,7 +2331,7 @@ function ssti() {
 		fi
 	else
 		if [[ $SSTI == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/ssti.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to SSTI ${reset}\n\n"
 		else
@@ -2361,7 +2361,7 @@ function sqli() {
 		fi
 	else
 		if [[ $SQLI == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/sqli.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to SQLi ${reset}\n\n"
 		else
@@ -2381,7 +2381,7 @@ function test_ssl() {
 		end_func "Results are saved in vulns/testssl.txt" ${FUNCNAME[0]}
 	else
 		if [[ $TEST_SSL == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2400,7 +2400,7 @@ function spraying() {
 		end_func "Results are saved in vulns/brutespray folder" ${FUNCNAME[0]}
 	else
 		if [[ $SPRAY == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2422,7 +2422,7 @@ function command_injection() {
 		fi
 	else
 		if [[ $COMM_INJ == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		elif [[ ! -s "gf/rce.txt" ]]; then
 			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} No URLs potentially vulnerables to Command Injection ${reset}\n\n"
 		else
@@ -2455,7 +2455,7 @@ function 4xxbypass() {
 		fi
 	else
 		if [[ $BYPASSER4XX == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2477,7 +2477,7 @@ function prototype_pollution() {
 		fi
 	else
 		if [[ $PROTO_POLLUTION == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2507,7 +2507,7 @@ function smuggling() {
 		fi
 	else
 		if [[ $SMUGGLING == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2537,7 +2537,7 @@ function webcache() {
 		fi
 	else
 		if [[ $WEBCACHE == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2567,7 +2567,7 @@ function fuzzparams() {
 		fi
 	else
 		if [[ $FUZZPARAMS == false ]]; then
-			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in boltrun.cfg ${reset}\n"
+			printf "\n${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} skipped in this mode or defined in reconftw.cfg ${reset}\n"
 		else
 			printf "${yellow}[$(date +'%Y-%m-%d %H:%M:%S')] ${FUNCNAME[0]} is already processed, to force executing ${FUNCNAME[0]} delete\n    $called_fn_dir/.${FUNCNAME[0]} ${reset}\n\n"
 		fi
@@ -2724,7 +2724,7 @@ function sendToNotify {
 		fi
 		if [[ -n $slack_channel ]] && [[ -n $slack_auth ]]; then
 			notification "[$(date +'%Y-%m-%d %H:%M:%S')] Sending ${domain} data over Slack" info
-			curl -F file=@${1} -F "initial_comment=boltrun zip file" -F channels=${slack_channel} -H "Authorization: Bearer ${slack_auth}" https://slack.com/api/files.upload 2>>"$LOGFILE" >/dev/null
+			curl -F file=@${1} -F "initial_comment=reconftw zip file" -F channels=${slack_channel} -H "Authorization: Bearer ${slack_auth}" https://slack.com/api/files.upload 2>>"$LOGFILE" >/dev/null
 		fi
 	fi
 }
@@ -2815,14 +2815,14 @@ function resolvers_update_quick_axiom() {
 function ipcidr_target() {
 	IP_CIDR_REGEX='(((25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?))(\/([8-9]|[1-2][0-9]|3[0-2]))([^0-9.]|$)|(((25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?)$)'
 	if [[ $1 =~ ^$IP_CIDR_REGEX ]]; then
-		echo $1 | mapcidr -silent | anew -q target_boltrun_ipcidr.txt
-		if [[ -s "./target_boltrun_ipcidr.txt" ]]; then
-			[ "$REVERSE_IP" = true ] && cat ./target_boltrun_ipcidr.txt | hakip2host | cut -d' ' -f 3 | unfurl -u domains 2>/dev/null | sed -e 's/*\.//' -e 's/\.$//' -e '/\./!d' | anew -q ./target_boltrun_ipcidr.txt
-			if [[ $(cat ./target_boltrun_ipcidr.txt | wc -l) -eq 1 ]]; then
-				domain=$(cat ./target_boltrun_ipcidr.txt)
-			elif [[ $(cat ./target_boltrun_ipcidr.txt | wc -l) -gt 1 ]]; then
+		echo $1 | mapcidr -silent | anew -q target_reconftw_ipcidr.txt
+		if [[ -s "./target_reconftw_ipcidr.txt" ]]; then
+			[ "$REVERSE_IP" = true ] && cat ./target_reconftw_ipcidr.txt | hakip2host | cut -d' ' -f 3 | unfurl -u domains 2>/dev/null | sed -e 's/*\.//' -e 's/\.$//' -e '/\./!d' | anew -q ./target_reconftw_ipcidr.txt
+			if [[ $(cat ./target_reconftw_ipcidr.txt | wc -l) -eq 1 ]]; then
+				domain=$(cat ./target_reconftw_ipcidr.txt)
+			elif [[ $(cat ./target_reconftw_ipcidr.txt | wc -l) -gt 1 ]]; then
 				unset domain
-				list=${PWD}/target_boltrun_ipcidr.txt
+				list=${PWD}/target_reconftw_ipcidr.txt
 			fi
 		fi
 		if [[ -n $2 ]]; then
@@ -3527,32 +3527,32 @@ function help() {
 	printf " \n"
 	printf " ${bblue}GENERAL OPTIONS${reset}\n"
 	printf "   --deep            Deep scan (Enable some slow options for deeper scan)\n"
-	printf "   -f config_file    Alternate boltrun.cfg file\n"
+	printf "   -f config_file    Alternate reconftw.cfg file\n"
 	printf "   -o output/path    Define output folder\n"
 	printf "   -v, --vps         Axiom distributed VPS \n"
 	printf "   -q                Rate limit in requests per second \n"
 	printf " \n"
 	printf " ${bblue}USAGE EXAMPLES${reset}\n"
 	printf " ${byellow}Perform full recon (without attacks):${reset}\n"
-	printf " ./boltrun.sh -d example.com -r\n"
+	printf " ./reconftw.sh -d example.com -r\n"
 	printf " \n"
 	printf " ${byellow}Perform subdomain enumeration on multiple targets:${reset}\n"
-	printf " ./boltrun.sh -l targets.txt -s\n"
+	printf " ./reconftw.sh -l targets.txt -s\n"
 	printf " \n"
 	printf " ${byellow}Perform Web based scanning on a subdomains list:${reset}\n"
-	printf " ./boltrun.sh -d example.com -l targets.txt -w\n"
+	printf " ./reconftw.sh -d example.com -l targets.txt -w\n"
 	printf " \n"
 	printf " ${byellow}Multidomain recon:${reset}\n"
-	printf " ./boltrun.sh -m company -l domainlist.txt -r\n"
+	printf " ./reconftw.sh -m company -l domainlist.txt -r\n"
 	printf " \n"
 	printf " ${byellow}Perform full recon (with active attacks) along Out-Of-Scope subdomains list:${reset}\n"
-	printf " ./boltrun.sh -d example.com -x out.txt -a\n"
+	printf " ./reconftw.sh -d example.com -x out.txt -a\n"
 	printf " \n"
 	printf " ${byellow}Perform full recon and store output to specified directory:${reset}\n"
-	printf " ./boltrun.sh -d example.com -r -o custom/path\n"
+	printf " ./reconftw.sh -d example.com -r -o custom/path\n"
 	printf " \n"
 	printf " ${byellow}Run custom function:${reset}\n"
-	printf " ./boltrun.sh -d example.com -c nuclei_check \n"
+	printf " ./reconftw.sh -d example.com -c nuclei_check \n"
 }
 
 ###############################################################################################################
@@ -3680,7 +3680,7 @@ while true; do
 		;;
 	'--help' | '-h' | *)
 		# echo "Unknown argument: $1"
-		. ./boltrun.cfg
+		. ./reconftw.cfg
 		banner
 		help
 		tools_installed
@@ -3708,15 +3708,15 @@ SCRIPTPATH="$(
 	cd "$(dirname "$0")" >/dev/null 2>&1 || exit
 	pwd -P
 )"
-. "${SCRIPTPATH}"/boltrun.cfg || {
-	echo "Error importing boltrun.ctg"
+. "${SCRIPTPATH}"/reconftw.cfg || {
+	echo "Error importing reconftw.ctg"
 	exit 1
 }
 
 if [[ -s $CUSTOM_CONFIG ]]; then
-	# shellcheck source=/home/six2dez/Tools/boltrun/custom_config.cfg
+	# shellcheck source=/home/six2dez/Tools/reconftw/custom_config.cfg
 	. "${CUSTOM_CONFIG}" || {
-		echo "Error importing boltrun.ctg"
+		echo "Error importing reconftw.ctg"
 		exit 1
 	}
 fi
@@ -3851,7 +3851,7 @@ case $opt_mode in
 			cp ${SCRIPTPATH}/$list $dir/webs/webs.txt
 		fi
 	else
-		printf "\n\n${bred} Web mode needs a website list file as target (./boltrun.sh -l target.txt -w) ${reset}\n\n"
+		printf "\n\n${bred} Web mode needs a website list file as target (./reconftw.sh -l target.txt -w) ${reset}\n\n"
 		exit
 	fi
 	webs_menu

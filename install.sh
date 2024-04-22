@@ -111,17 +111,13 @@ repos["Wapiti"]="wapiti-scanner/wapiti"
 function banner() {
 	tput clear
 	printf "\n${bgreen}"
-	printf "  ██▀███  ▓█████  ▄████▄   ▒█████   ███▄    █   █████▒▄▄▄█████▓ █     █░\n"
-	printf " ▓██ ▒ ██▒▓█   ▀ ▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██   ▒ ▓  ██▒ ▓▒▓█░ █ ░█░\n"
-	printf " ▓██ ░▄█ ▒▒███   ▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒████ ░ ▒ ▓██░ ▒░▒█░ █ ░█ \n"
-	printf " ▒██▀▀█▄  ▒▓█  ▄ ▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░▓█▒  ░ ░ ▓██▓ ░ ░█░ █ ░█ \n"
-	printf " ░██▓ ▒██▒░▒████▒▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░▒█░      ▒██▒ ░ ░░██▒██▓ \n"
-	printf " ░ ▒▓ ░▒▓░░░ ▒░ ░░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒  ▒ ░      ▒ ░░   ░ ▓░▒ ▒  \n"
-	printf "   ░▒ ░ ▒░ ░ ░  ░  ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░          ░      ▒ ░ ░  \n"
-	printf "   ░░   ░    ░   ░        ░ ░ ░ ▒     ░   ░ ░  ░ ░      ░        ░   ░  \n"
-	printf "    ░        ░  ░░ ░          ░ ░           ░                      ░    \n"
-	printf "                 ░                                                      \n"
-	printf " ${reconftw_version}                                         by @six2dez\n"
+	printf "____        _ _   _____             \n"
+	printf "|  _ \      | | | |  __ \            \n"
+	printf "| |_) | ___ | | |_| |__) |   _ _ __  \n"
+	printf "|  _ < / _ \| | __|  _  / | | | '_ \ \n"
+	printf "| |_) | (_) | | |_| | \ \ |_| | | | |\n"
+	printf "|____/ \___/|_|\__|_|  \_\__,_|_| |_|\n"
+	printf "                                         by TeamBolt\n"
 }
 
 # This function installs various tools and repositories as per the configuration.
