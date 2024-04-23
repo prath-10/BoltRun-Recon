@@ -36,7 +36,6 @@ cd BoltRun-Recon/
 
 # Usage
 
-> Check out the wiki section to know which flag performs what all steps/attacks [Usage Guide](https://github.com/six2dez/reconftw/wiki/2.-Usage-Guide) :book:
 
 ## TARGET OPTIONS
 
