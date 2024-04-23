@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/prath-10/BoltRun-Recon"><img src="https://github.com/six2dez/reconftw/blob/main/images/banner.png" alt="BoltRun Recon"></a>
+  <a href="https://github.com/prath-10/BoltRun-Recon"><img src="https://github.com/prath-10/BoltRun-Recon/blob/main/images/banner.png" alt="BoltRun Recon"></a>
   <br>
   BoltRun Recon
   <br>
@@ -210,4 +210,4 @@ cd reconftw/
 
 ## Mindmap/Workflow
 
-![Mindmap](images/mindmap_obsidian.png)
+![Mindmap](/images/mindmap_obsidian.png)
