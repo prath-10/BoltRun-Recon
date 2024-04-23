@@ -24,8 +24,8 @@ So, what are you waiting for? Go! Go! Go! :boom:
 ## a) Using a PC/VPS/VM
 
 ```bash
-git clone https://github.com/six2dez/reconftw
-cd reconftw/
+git clone https://github.com/prath-10/BoltRun-Recon
+cd BoltRun-Recon/
 ./install.sh
 ./reconftw.sh -d target.com -r
 ```
